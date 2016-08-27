@@ -81,7 +81,7 @@ LOCAL_SHARED_LIBRARIES := \
     libz
 LOCAL_CFLAGS := -DREAL_UUID
 
-ifeq ($(BOARD_NO_SECURE_DISCARD),true)
+ifeq ($(NO_SECURE_DISCARD),true)
     LOCAL_CFLAGS += -DNO_SECURE_DISCARD
 endif
 
@@ -101,7 +101,7 @@ LOCAL_STATIC_LIBRARIES := \
     libselinux \
     libbase
 
-ifeq ($(BOARD_NO_SECURE_DISCARD),true)
+ifeq ($(NO_SECURE_DISCARD),true)
     LOCAL_CFLAGS += -DNO_SECURE_DISCARD
 endif
 
